@@ -9,10 +9,10 @@ const server = http.createServer(app)
 dotenv.config()
 const PORT=process.env.PORT ;
 const io  = new Server(server,{
-    cors:{
-        origin:"https://630bac4f7ca56172a9983f94--charming-sprinkles-819e65.netlify.app/",
-        methods:["GET","POST"],
-    }
+//     cors:{
+//         origin:"https://630bac4f7ca56172a9983f94--charming-sprinkles-819e65.netlify.app/",
+//         methods:["GET","POST"],
+//     }
 })
 app.get("/hello",(req,res)=>{
    res.send("hello")
