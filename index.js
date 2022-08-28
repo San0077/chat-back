@@ -7,7 +7,7 @@ const app = express()
 app.use(cors())
 const server = http.createServer(app)
 dotenv.config()
-
+const PORT=process.env.PORT ;
 const io  = new Server(server,{
     cors:{
         origin:"https://630bac4f7ca56172a9983f94--charming-sprinkles-819e65.netlify.app/",
@@ -35,6 +35,6 @@ io.on("connection",(socket)=>{
 })
 
 
-server.listen(process.env.PORT,()=>{
+server.listen(PORT,()=>{
     console.log("server is ready")
 });
