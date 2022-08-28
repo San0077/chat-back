@@ -2,10 +2,11 @@ import { Server } from "socket.io";
 import express from "express"
 import cors from "cors"
 import http from "http"
+import dotenv from 'dotenv'
 const app = express()
 app.use(cors())
 const server = http.createServer(app)
-
+dotenv.config()
 
 const io  = new Server(server,{
     cors:{
@@ -32,6 +33,6 @@ io.on("connection",(socket)=>{
 })
 
 
-server.listen(4000,()=>{
+server.listen(process.env.PORT,()=>{
     console.log("server is ready")
 });
