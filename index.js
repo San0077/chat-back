@@ -14,7 +14,9 @@ const io  = new Server(server,{
         methods:["GET","POST"],
     }
 })
-
+app.get("/hello",(req,res)=>{
+   res.send("hello")
+})
 io.on("connection",(socket)=>{
    socket.on("join_room",(data)=>{
       socket.join(data)
