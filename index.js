@@ -11,7 +11,7 @@ const server = createServer(app)
 dotenv.config()
 const io  = new Server(server,{
     cors: {
-        origin: ["https://630c6ea41b73c30008a70781--charming-sprinkles-819e65.netlify.app/","https://charming-sprinkles-819e65.netlify.app/"],
+        origin: ["https://charming-sprinkles-819e65.netlify.app/"],
         methods: ["GET", "POST"],
       },
 })
