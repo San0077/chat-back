@@ -10,7 +10,7 @@ const server = http.createServer(app)
 dotenv.config()
 const io  = new Server(server)
 var PORT = process.env.PORT
-app.get("/",(req,res)=>{
+app.post("/",(req,res)=>{
 
 io.on("connection",(socket)=>{
    socket.on("join_room",(data)=>{
