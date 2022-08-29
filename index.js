@@ -10,7 +10,7 @@ const server = http.createServer(app)
 dotenv.config()
 const io  = new Server(server)
 var PORT = process.env.PORT
-app.post("/",(req,res)=>{
+
 
 io.on("connection",(socket)=>{
    socket.on("join_room",(data)=>{
@@ -28,7 +28,7 @@ io.on("connection",(socket)=>{
     console.log("user disconste")
  })
 })
-})
+
 
 server.listen(PORT,()=>{
     console.log("server is ready")
